@@ -32,22 +32,27 @@ function printData(data) {
     && list !=  null) {
 
       let raceList = data.MRData.RaceTable.Races;
+      
+
 
         for (let i = 0; i < raceList.length; i++) {
 
           let raceName = raceList[i].raceName;
-          let firstPractice = raceList[i].firstPractice;
+          //let firstPractice = raceList[i].firstPractice;
+          //let secondPractice = raceList[i].secondPractice
+          let raceDate = raceList[i].date;
+          let raceTime = raceList[i].time;
 
 
-
-
-
-          console.log(raceName, firstPractice);
+          console.log(raceName, raceDate, raceTime);
 
           var li = document.createElement("li");
-          li.appendChild(document.createTextNode(raceName));
+          li.appendChild(document.createTextNode(raceName))
+          var span = document.createElement("span");
+          span.appendChild(document.createTextNode(raceDate))
 
           list.appendChild(li);
+          list.appendChild(span);
         }
     }
 }
