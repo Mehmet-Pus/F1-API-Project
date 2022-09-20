@@ -48,8 +48,9 @@ function printData(data) {
 
           var li = document.createElement("li");
           li.appendChild(document.createTextNode(raceName))
+          var styleDate = moment(raceDate).format('LL');
           var span = document.createElement("span");
-          span.appendChild(document.createTextNode(raceDate))
+          span.appendChild(document.createTextNode(styleDate))
 
           list.appendChild(li);
           list.appendChild(span);
